@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+ <!DOCTYPE html>
     <html>
       <head>
         <meta charset="UTF-8"/>
@@ -219,7 +218,11 @@
             // that kepler likes.  All we need to do is make the id match the one in the config above
             fetch('https://api.qri.cloud/get/qri-cron-bot/wake-county-early-voting-wait-times/body.csv')
               .then(d => d.text())
+            
               .then((csvData) => {
+              
+              .then((csvData) {
+      master
                 const dataset = {
                   info: {id: 'wy7ty1a9l', label: 'body.csv'},
                   data: keplerGl.processCsvData(csvData),

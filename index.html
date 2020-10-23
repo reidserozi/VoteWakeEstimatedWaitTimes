@@ -207,23 +207,36 @@
            * to add new data and customize behavior
            */
           (function customize(keplerGl, store) {
-            const datasets = [{"version":"v1","data":{"id":"wy7ty1a9l","label":"body.csv","color":[143,47,191],"allData":[["Abbott's Creek Community Center","2020-10-21T15:03:04.000Z","9950 Durant Rd, Raleigh, NC 27614","10 - 30 minutes",-78.5796615,35.9024228],["Apex Community Center","2020-10-21T15:34:52.000Z","53 Hunter St, Apex, NC 27502","30 - 60 minutes",-78.8477713,35.7335884],["Avery Street Recreation Center","2020-10-21T15:34:44.000Z","125 Avery St, Garner, NC 27529","5 - 10 minutes",-78.6132246,35.7121434],["Barwell Road Community Center","2020-10-21T14:56:14.000Z","5857 Barwell Park Dr, Raleigh, NC 27610","No wait",-78.5514164,35.7305552],["Cary Senior Center","2020-10-21T15:30:55.000Z","120 Maury Odell Pl, Cary, NC 27513","30 - 60 minutes",-78.82833,35.7852104],["Eastern Regional Center","2020-10-21T15:31:35.000Z","1002 Dogwood Dr, Zebulon, NC 27597","30 - 60 minutes",-78.3219593,35.8372259],["Green Road Community Center","2020-10-21T15:37:44.000Z","4201 Green Rd, Raleigh, NC 27604","5 - 10 minutes",-78.5933224,35.8411318],["Herbert C. Young Community Center","2020-10-21T15:35:42.000Z","101 Wilkinson Ave, Cary, NC 27513","30 - 60 minutes",-78.7827466,35.7906268],["Knightdale Recreation Center","2020-10-21T15:09:55.000Z","102 Lawson Ridge Rd, Knightdale, NC 27545","10 - 30 minutes",-78.5209702,35.7998178],["Lake Lynn Community Center","2020-10-21T14:50:50.000Z","7921 Ray Rd, Raleigh, NC 27613","30 - 60 minutes",-78.7011752,35.8875842],["Laurel Hills Community Center","2020-10-21T15:33:11.000Z","3808 Edwards Mill Rd, Raleigh, NC 27612","10 - 30 minutes",-78.7005336,35.8302567],["NCSU Talley Student Union","2020-10-21T15:27:54.000Z","2411 Dunn Ave, Raleigh, NC 27606","10 - 30 minutes",-78.6731332,35.7838527],["Northern Regional Center","2020-10-21T15:30:49.000Z","350 E Holding Ave, Wake Forest, NC 27587","1 - 2 hours",-78.5131533,35.9701365],["Optimist Community Center","2020-10-21T15:31:32.000Z","5900 Whittier Dr, Raleigh, NC 27609","5 - 10 minutes",-78.645889,35.8624882],["Roberts Community Center","2020-10-21T15:03:25.000Z","1300 E Martin St, Raleigh, NC 27610","5 - 10 minutes",-78.620495,35.7755233],["W.E. Hunt Recreation Center","2020-10-21T15:03:12.000Z","301 Stinson Ave, Holly Springs, NC 27540","30 - 60 minutes",-78.831415,35.6464993],["W.O. Council Gym","2020-10-21T15:28:02.000Z","106 N Ennis St, Fuquay-Varina, NC 27526","10 - 30 minutes",-78.7949039,35.5848519],["Wake County Commons Building","2020-10-21T15:28:24.000Z","4011 Carya Dr, Raleigh, NC 27610","No wait",-78.5722767,35.7716297],["Wake Technical Community College North Campus","2020-10-21T15:33:00.000Z","6750 Perry Creek Rd, Raleigh, NC 27616","10 - 30 minutes",-78.7647425,35.7595243],["Wake Technical Community College South Campus","2020-10-21T15:29:08.000Z","9101 Fayetteville Rd, Raleigh, NC 27603","10 - 30 minutes",-78.7047179,35.6515968]],"fields":[{"name":"wake_county_early_voting_site","type":"string","format":"","analyzerType":"STRING"},{"name":"wait_time_estimate_last_updated_at","type":"timestamp","format":"YYYY-M-DTHH:mm:ss.SSSS","analyzerType":"DATETIME"},{"name":"early_voting_site_address","type":"string","format":"","analyzerType":"STRING"},{"name":"current_estimated_wait_time","type":"string","format":"","analyzerType":"STRING"},{"name":"longitude","type":"real","format":"","analyzerType":"FLOAT"},{"name":"latitude","type":"real","format":"","analyzerType":"FLOAT"}]}}];
+
             const config = {"version":"v1","config":{"visState":{"filters":[],"layers":[{"id":"egv40ro","type":"point","config":{"dataId":"wy7ty1a9l","label":"Point","color":[255,203,153],"columns":{"lat":"latitude","lng":"longitude","altitude":null},"isVisible":true,"visConfig":{"radius":58.4,"fixedRadius":false,"opacity":0.6,"outline":false,"thickness":2,"strokeColor":null,"colorRange":{"name":"Custom Palette","type":"custom","category":"Custom","colors":["#d73027","#d9ef8b","#fc8d59","#91cf60","#1a9850"]},"strokeColorRange":{"name":"Global Warming","type":"sequential","category":"Uber","colors":["#5A1846","#900C3F","#C70039","#E3611C","#F1920E","#FFC300"]},"radiusRange":[0,50],"filled":true},"hidden":false,"textLabel":[{"field":{"name":"current_estimated_wait_time","type":"string"},"color":[250,227,0],"size":18,"offset":[0,0],"anchor":"middle","alignment":"top"},{"field":{"name":"wake_county_early_voting_site","type":"string"},"color":[255,255,255],"size":20,"offset":[0,0],"anchor":"middle","alignment":"bottom"}]},"visualChannels":{"colorField":{"name":"current_estimated_wait_time","type":"string"},"colorScale":"ordinal","strokeColorField":null,"strokeColorScale":"quantile","sizeField":null,"sizeScale":"linear"}}],"interactionConfig":{"tooltip":{"fieldsToShow":{"wy7ty1a9l":[{"name":"wake_county_early_voting_site","format":null},{"name":"wait_time_estimate_last_updated_at","format":null},{"name":"early_voting_site_address","format":null},{"name":"current_estimated_wait_time","format":null}]},"compareMode":false,"compareType":"absolute","enabled":true},"brush":{"size":19.9,"enabled":false},"geocoder":{"enabled":false},"coordinate":{"enabled":false}},"layerBlending":"normal","splitMaps":[],"animationConfig":{"currentTime":null,"speed":1}},"mapState":{"bearing":0,"dragRotate":false,"latitude":35.79757488615995,"longitude":-78.62267581615772,"pitch":0,"zoom":10.861361452361004,"isSplit":false},"mapStyle":{"styleType":"dark","topLayerGroups":{"road":false},"visibleLayerGroups":{"label":false,"road":true,"border":false,"building":false,"water":false,"land":false,"3d building":false},"threeDBuildingColor":[9.665468314072013,17.18305478057247,31.1442867897876],"mapStyles":{}}}};
 
-            const loadedData = keplerGl.KeplerGlSchema.load(
-              datasets,
-              config
-            );
+            // demonstrates loading data from the qri.cloud api
+            // the config above was generated along with this html document by loading the data
+            // in the kepler demo app and using the styling GUI
+            // there used to be a `datasets` object containing the hard-coded data
 
-            store.dispatch(keplerGl.addDataToMap({
-              datasets: loadedData.datasets,
-              config: loadedData.config,
-              options: {
-                centerMap: false
-              }
-            }));
+            // this fetch() will get a CSV, use processCsvData() to transform it into a format
+            // that kepler likes.  All we need to do is make the id match the one in the config above
+            fetch('https://api.qri.cloud/get/qri-cron-bot/wake-county-early-voting-wait-times/body.csv')
+              .then(d => d.text())
+              .then((csvData) => {
+                const dataset = {
+                  info: {id: 'wy7ty1a9l', label: 'body.csv'},
+                  data: keplerGl.processCsvData(csvData),
+                  version: "v1"
+                };
+
+                store.dispatch(keplerGl.addDataToMap({
+                  datasets: [dataset],
+                  config: config,
+                  options: {
+                    centerMap: true,
+                    readOnly: false
+                  }
+                }));
+              });
+
           }(KeplerGl, store))
         </script>
       </body>
     </html>
-  
